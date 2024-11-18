@@ -5,10 +5,10 @@ import "./App.css";
 
 export default function App(){
     return (
-        <>
+        <div className="App-Container">
             <Header/>
             <Main/>
             <Footer/>
-        </>
+        </div>
     );
 };

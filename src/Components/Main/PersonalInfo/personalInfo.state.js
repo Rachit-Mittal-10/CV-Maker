@@ -4,7 +4,7 @@ export function usePersonalInfoState(){
     const [personalInfo, setPersonalInfo] = useState({
         name: '',
         age: '',
-        dob: '',
+        dob: '1900-01-01',
         contactNumber: '',
         email: '',
         location: ''

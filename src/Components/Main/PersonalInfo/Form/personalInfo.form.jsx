@@ -5,11 +5,11 @@ export function PersonalInfoForm(){
     return (
         <>
             <label htmlFor="name">Name:{ }</label>
-            <input id="name" name="name" type="text" value={personalInfo.name} onChange={handleInputChange}/>
+            <input id="name" name="name" type="text" value={personalInfo.name} onInput={handleInputChange}/>
             <label htmlFor="age">Age:{ }</label>
             <input id="age" name="age" type="number" value={personalInfo.age} onChange={handleInputChange}/>
             <label htmlFor="dob">DOB:{ }</label>
-            <input id="dob" name="dob" type="date" value={personalInfo.dob} onChange={handleInputChange}/>
+            <input id="dob" name="dob" type="date" value={personalInfo.dob} onChange={handleInputChange} min={"1900-01-01"}/>
             <label htmlFor="contactNumber">Contact Number:{ }</label>
             <input id="contactNumber" name="contactNumber" type="number" value={personalInfo.contactNumber} onChange={handleInputChange}/>
             <label htmlFor="email">E-Mail:{ }</label>
