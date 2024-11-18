@@ -1,7 +1,7 @@
 import {useEducationState} from "../education.state";
 
-export default function EducationDisplay(){
-    const [education] = useEducationState();
+export function EducationDisplay(){
+    const {education} = useEducationState();
     return (
         <div className="education-display">
             <p>Degree: {education.degree}</p>

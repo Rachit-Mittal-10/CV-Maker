@@ -1,7 +1,7 @@
 import {useExperienceState} from "../experience.state";
 
-export default function ExperienceDisplay(){
-    const [experience] = useExperienceState();
+export function ExperienceDisplay(){
+    const {experience} = useExperienceState();
     return (
         <div className="experience">
             <p>Role: {experience.role}</p>

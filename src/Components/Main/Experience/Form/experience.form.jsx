@@ -1,7 +1,7 @@
-import useExperienceState from "../experience.state";
+import {useExperienceState} from "../experience.state";
 
-export default function ExperienceForm(){
-    const [experience,handleInputChange] = useExperienceState();
+export function ExperienceForm(){
+    const {experience,handleInputChange} = useExperienceState();
     return (
         <>
             <label htmlFor="role">Role:{ }</label>

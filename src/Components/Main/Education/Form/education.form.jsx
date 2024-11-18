@@ -1,7 +1,7 @@
 import {useEducationState} from "../education.state";
 
-export default function EducationForm(){
-    const [education, handleInputChange] = useEducationState();
+export function EducationForm(){
+    const {education, handleInputChange} = useEducationState();
     return (
         <>
             <label htmlFor="degree">Degree:{ }</label>

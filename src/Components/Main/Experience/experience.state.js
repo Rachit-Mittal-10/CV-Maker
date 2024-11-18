@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function useExperienceState(){
+export function useExperienceState(){
     const [experience, setExperience] = useState({
         role: '',
         company: '',
@@ -13,7 +13,7 @@ export default function useExperienceState(){
         const {name,value} = e.target;
         setExperience((prev)=>{
             return {
-                prev,
+                ...prev,
                 [name]:value,
             };
         });
