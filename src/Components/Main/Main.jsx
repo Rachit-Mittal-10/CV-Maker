@@ -1,4 +1,4 @@
-import "./Main.css";
+import Styles from "./Main.module.scss";
 import {EducationForm} from "./Education/Form/education.form";
 import {ExperienceForm} from "./Experience/Form/experience.form";
 import {PersonalInfoForm} from "./PersonalInfo/Form/personalInfo.form";
@@ -8,8 +8,8 @@ import {PersonalInfoDisplay} from "./PersonalInfo/Display/personalInfo.display";
 
 export function Main(){
     return (
-        <main>
-            <div className="input-form-div">
+        <main className={Styles.main}>
+            <div>
                 <h3>Personal Information</h3>
                 <PersonalInfoForm />
                 <h3>Education</h3>
@@ -17,7 +17,7 @@ export function Main(){
                 <h3>Experience</h3>
                 <ExperienceForm />
             </div>
-            <div className="display-div">
+            <div>
                 <PersonalInfoDisplay />
                 <EducationDisplay />
                 <ExperienceDisplay />
