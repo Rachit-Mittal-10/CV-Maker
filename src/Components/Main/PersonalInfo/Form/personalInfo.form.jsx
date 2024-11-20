@@ -1,4 +1,6 @@
 import {usePersonalInfoState} from "../personalInfo.state";
+import { Date } from "../../../Shared/Date/Date";
+
 
 export function PersonalInfoForm(){
     const {personalInfo, handleInputChange} = usePersonalInfoState();
@@ -8,8 +10,7 @@ export function PersonalInfoForm(){
             <input id="name" name="name" type="text" value={personalInfo.name} onInput={handleInputChange}/>
             <label htmlFor="age">Age:{ }</label>
             <input id="age" name="age" type="number" value={personalInfo.age} onChange={handleInputChange}/>
-            <label htmlFor="dob">DOB:{ }</label>
-            <input id="dob" name="dob" type="date" value={personalInfo.dob} onChange={handleInputChange} min={"1900-01-01"}/>
+            <Date label="dob" text="DOB" value={personalInfo.dob} handler={handleInputChange} />
             <label htmlFor="contactNumber">Contact Number:{ }</label>
             <input id="contactNumber" name="contactNumber" type="number" value={personalInfo.contactNumber} onChange={handleInputChange}/>
             <label htmlFor="email">E-Mail:{ }</label>

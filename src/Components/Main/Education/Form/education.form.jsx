@@ -1,25 +1,15 @@
 import {useEducationState} from "../education.state";
+import { Date } from "../../../Shared/Date/Date";
+import { Input } from "../../../Shared/Input/Input";
 
 export function EducationForm(){
     const {education, handleInputChange} = useEducationState();
     return (
         <>
-            <div className="degree-container">
-                <label htmlFor="degree">Degree:{ }</label>
-                <input id="degree" name="degree" type="text" value={education.degree} onChange={handleInputChange}/>
-            </div>
-            <div className="college-container">
-                <label htmlFor="college">College:{ }</label>
-                <input id="college" name="college" type="text" value={education.college} onChange={handleInputChange}/>
-            </div>
-            <div className="from-date">
-                <label htmlFor="fromDate">From Date:{ }</label>
-                <input id="fromDate" name="fromDate" type="date" value={education.fromDate} onChange={handleInputChange}/>
-            </div>
-            <div>
-                <label htmlFor="toDate">To Date:{ }</label>
-                <input id="toDate" name="toDate" type="date" value={education.toDate} onChange={handleInputChange}/>
-            </div>
+            <Input label="degree" text="Degree" value={education.degree} handler={handleInputChange}/>
+            <Input label="college" text="College" value={education.college} handler={handleInputChange}/>
+            <Date label="from-date" value={education.fromDate} handler={handleInputChange} text="From Date"/>
+            <Date label="to-date" value={education.toDate} handler={handleInputChange} text="To Date"/>
         </>
     );
 };
