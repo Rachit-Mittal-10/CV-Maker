@@ -1,0 +1,13 @@
+.Date{
+    padding: 0.5rem;
+    display: flex;
+
+    label{
+        font-weight: bold;
+    }
+    input{
+        padding: 0.25rem;
+        border-radius: 0.1rem;
+        border: 2px solid lightgray;
+    }
+}

@@ -6,6 +6,8 @@ import {EducationDisplay} from "./Education/Display/education.display";
 import {ExperienceDisplay} from "./Experience/Display/experience.display";
 import {PersonalInfoDisplay} from "./PersonalInfo/Display/personalInfo.display";
 
+import {Date} from "../Shared/Date/Date";
+
 export function Main(){
     return (
         <main className={Styles.main}>
