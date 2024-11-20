@@ -5,14 +5,15 @@ Input.propTypes = {
     label: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
     value: PropTypes.string.isRequired,
-    handler: PropTypes.string.isRequired,
+    handler: PropTypes.func.isRequired,
+    type: PropTypes.string.isRequired,
 }
 
 export function Input(props){
     return (
         <div className={InputStyles.Input}>
             <label htmlFor={props.label}>{props.text}:{ }</label>
-            <input value={props.value} id={props.label} name={props.label} onChange={props.handler}/>
+            <input value={props.value} id={props.label} name={props.label} onChange={props.handler} type={props.type}/>
         </div>
     );
 }
