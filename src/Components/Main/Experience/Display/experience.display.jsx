@@ -4,15 +4,30 @@ ExperienceDisplay.propTypes = {
     resumeData: PropTypes.object,
 }
 
+ExperienceEntry.propTypes = {
+    exp: PropTypes.object,
+}
+
+function ExperienceEntry(props){
+    const { exp } = props;
+    return (
+        <div className="entry">
+            <p>Role: {exp.role}</p>
+            <p>Company: {exp.company}</p>
+            <p>From Date: {exp.fromDate}</p>
+            <p>To Date: {exp.toDate}</p>
+            <p>Description: {exp.description}</p>
+        </div>
+    );
+}
+
 export function ExperienceDisplay(props){
     const experience = props.resumeData.experience;
     return (
         <div className="experience">
-            <p>Role: {experience.role}</p>
-            <p>Company: {experience.company}</p>
-            <p>From Date: {experience.fromDate}</p>
-            <p>To Date: {experience.toDate}</p>
-            <p>Description: {experience.description}</p>
+            {
+                experience.map((exp,index)=><ExperienceEntry key={index} exp={exp} />)
+            }
         </div>
     );
-}
+};

@@ -21,7 +21,6 @@ export function Main(){
         education:[],
         skills: []
     });
-
     return (
         <main className={Styles.main}>
             <div>
