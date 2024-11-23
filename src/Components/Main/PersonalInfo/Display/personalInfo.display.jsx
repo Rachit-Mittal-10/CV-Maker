@@ -1,7 +1,11 @@
-import {usePersonalInfoState} from "../personalInfo.state";
+import PropTypes from "prop-types";
 
-export function PersonalInfoDisplay(){
-    const {personalInfo} = usePersonalInfoState();
+PersonalInfoDisplay.propTypes = {
+    resumeData: PropTypes.object.isRequired,
+}
+
+export function PersonalInfoDisplay(props){
+    const personalInfo = props.resumeData.personalInfo;
     return (
         <div className="personal-info">
             <p>Name: {personalInfo.name}</p>

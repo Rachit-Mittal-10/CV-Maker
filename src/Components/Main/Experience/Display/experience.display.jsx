@@ -1,7 +1,11 @@
-import {useExperienceState} from "../experience.state";
+import PropTypes from "prop-types";
 
-export function ExperienceDisplay(){
-    const {experience} = useExperienceState();
+ExperienceDisplay.propTypes = {
+    resumeData: PropTypes.object,
+}
+
+export function ExperienceDisplay(props){
+    const experience = props.resumeData.experience;
     return (
         <div className="experience">
             <p>Role: {experience.role}</p>
